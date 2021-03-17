@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_res"
+    tools:context=".ListActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLocV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLocH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.045" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.075" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/seta_retroceder"
+        android:onClick="onClickBack"
+        app:layout_constraintBottom_toBottomOf="@+id/glLocH"
+        app:layout_constraintLeft_toLeftOf="@id/glRet"
+        app:layout_constraintRight_toRightOf="@id/glRet"
+        app:layout_constraintTop_toTopOf="@id/glLocH" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/t0"
+        android:layout_width="200dp"
+        android:layout_height="27dp"
+        android:background="@color/transparent"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="INFORMAÇÃO"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/glLocH"
+        app:layout_constraintLeft_toLeftOf="@+id/glLocV"
+        app:layout_constraintRight_toRightOf="@+id/glLocV"
+        app:layout_constraintTop_toTopOf="@+id/glLocH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/glV"
+        app:layout_constraintRight_toRightOf="@id/glV"
+        app:layout_constraintTop_toBottomOf="@id/gl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TERMO DE RESPONSABILIDADE"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="As previsões são realizadas pelo Núcleo de Modelação Estuarina e Costeira da Universidade de Aveiro, utilizando as sub-rotinas em código Matlab® inseridas no pacote T_Tide.  Nem a Universidade de Aveiro, nem o NMEC, reclamam direitos de propriedade ou outros sobre estas previsões, considerando-as do domínio público para uso pessoal ou institucional, não sendo devido nenhum tipo de taxa ou custo pela sua utilização.  Nem a Universidade de Aveiro, nem o NMEC, são responsáveis por quaisquer perdas ou danos sofridos na sequência da utilização destas previsões."
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOTAS EXPLICATIVAS                                                                                                                                                                                                                                                                    "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="As previsões de maré apresentadas nesta aplicação foram calculadas a partir de análise harmónica de séries temporais de elevação da superfície livre obtidas através de:"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Observações recentes (2012 e 2013) e cedidas pela Administração do Porto de Aveiro (APA,S.A.)."
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Modelo hidrodinâmico ELCIRC, implementado à Ria de Aveiro pelo NMEC. Detalhes dessa implementação podem ser consultados em Lopes et al. (2013) e Lopes e Dias (2015)."
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Em qualquer um dos casos (modelo e observações), as previsões consideram apenas a componente astronómica da maré, que se deve sobretudo à atração gravitacional da Lua e do Sol. Consequente, os valores previstos podem ser diferentes dos valores reais, principalmente em condições atmosféricas adversas."
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="* Os níveis estão referenciados ao Zero Hidrográfico (ZH)."
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="* A hora das tabelas é a hora legal para Portugal Continental"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="* Referências: "
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lopes C.L., Dias J.M. (2015) Tidal dynamics in a changing lagoon: Flooding or not flooding the marginal regions. Estuarine, Coastal and Shelf Science. 167, 14-24. Lopes C.L., Azevedo A., Dias J.M (2013) Flooding assessment under sea level rise scenarios: Ria de Aveiro case study. Journal of Coastal Research. SI65, 766-771. "
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1ª versão:\n\t\t\t\t\t\tHugo Silva\n\t\t\t\t\t\t\t\t\t\t\t\t(hugosilva91@ua.pt)"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2ª versão:\n\t\t\t\t\t\tJoão Pais - Programação\n\t\t\t\t\t\t\t\t\t\t\t\t(joaomcspais@gmail.com)\n\t\t\t\t\t\tRafaela Tavares - Design\n\t\t\t\t\t\t\t\t\t\t\t\t(rafaelamonteiro.tavares@outlook.pt)"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/i1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/logo_nmec"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/i2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="20dp"/>
+
+                <ImageView
+                    android:id="@+id/i2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/logo_dfis"
+                    app:layout_constraintLeft_toRightOf="@id/i1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"></View>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

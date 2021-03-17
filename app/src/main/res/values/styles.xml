@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DatePickerStyle" parent="android:Widget.DatePicker">
+        <item name="android:fontFamily">@font/sailors</item>
+        <item name="android:textColor">@color/theme</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColorPrimary">@color/theme</item>
+        <item name="colorControlNormal">@color/theme</item>
+    </style>
+
+    <style name="AboutStyle">
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

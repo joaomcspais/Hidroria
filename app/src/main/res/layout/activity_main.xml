@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/start"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glButH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glButV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:background="@drawable/botao_comecar"
+        app:layout_constraintTop_toTopOf="@+id/glButH"
+        app:layout_constraintBottom_toBottomOf="@+id/glButH"
+        app:layout_constraintLeft_toLeftOf="@+id/glButV"
+        app:layout_constraintRight_toRightOf="@+id/glButV"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

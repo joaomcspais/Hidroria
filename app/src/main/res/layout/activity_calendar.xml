@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarActivity"
+    android:background="@drawable/layout_calenda">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLocV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLocH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.045" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/seta_retroceder"
+        app:layout_constraintLeft_toLeftOf="@id/glRet"
+        app:layout_constraintRight_toRightOf="@id/glRet"
+        app:layout_constraintTop_toTopOf="@id/glLocH"
+        app:layout_constraintBottom_toBottomOf="@+id/glLocH"
+        android:onClick="onClickBack"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="LOCALIZAÇÃO"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="@+id/glLocV"
+        app:layout_constraintTop_toTopOf="@+id/glLocH"
+        app:layout_constraintBottom_toBottomOf="@+id/glLocH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glDateV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glDateH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="@+id/glDateV"
+        app:layout_constraintRight_toRightOf="@+id/glDateV"
+        app:layout_constraintTop_toTopOf="@+id/glDateH"
+        app:layout_constraintBottom_toBottomOf="@+id/glDateH"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCalH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCalV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glButH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glButV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/seguinte"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:onClick="onClickNext"
+        android:text="Procurar"
+        app:layout_constraintLeft_toLeftOf="@id/glButV"
+        app:layout_constraintRight_toRightOf="@id/glButV"
+        app:layout_constraintTop_toTopOf="@+id/glButH"
+        app:layout_constraintBottom_toBottomOf="@id/glButH"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/buttonstyle" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        app:layout_constraintTop_toTopOf="@+id/glCalH"
+        app:layout_constraintBottom_toBottomOf="@id/glCalH"
+        app:layout_constraintLeft_toLeftOf="@+id/glCalV"
+        app:layout_constraintRight_toRightOf="@+id/glCalV"
+        android:theme="@style/DatePickerStyle"
+        android:maxDate="12/28/2025"
+        android:minDate="01/01/2020"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

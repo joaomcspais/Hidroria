@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jp.hidroria">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_app_"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_app_"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Hidroria">
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ResultsActivity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".ListActivity" />
+    </application>
+
+</manifest>

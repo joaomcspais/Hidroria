@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity"
+    android:background="@drawable/mapa">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glOvarV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.595" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glOvarH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.075"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/seta_retroceder"
+        app:layout_constraintLeft_toLeftOf="@id/glRet"
+        app:layout_constraintRight_toRightOf="@id/glRet"
+        app:layout_constraintTop_toTopOf="@id/glLocH"
+        app:layout_constraintBottom_toBottomOf="@+id/glLocH"
+        android:onClick="onClickBack"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ovar"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Ovar"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glOvarV"
+        app:layout_constraintRight_toRightOf="@+id/glOvarV"
+        app:layout_constraintTop_toTopOf="@+id/glOvarH"
+        app:layout_constraintBottom_toBottomOf="@+id/glOvarH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVarelaV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVarelaH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/varela"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Varela"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glVarelaV"
+        app:layout_constraintRight_toRightOf="@+id/glVarelaV"
+        app:layout_constraintTop_toTopOf="@+id/glVarelaH"
+        app:layout_constraintBottom_toBottomOf="@+id/glVarelaH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTorreiraV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTorreiraH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/torreira"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Torreira"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glTorreiraV"
+        app:layout_constraintRight_toRightOf="@+id/glTorreiraV"
+        app:layout_constraintTop_toTopOf="@+id/glTorreiraH"
+        app:layout_constraintBottom_toBottomOf="@+id/glTorreiraH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glChegadoV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glChegadoH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chegado"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Chegado"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glChegadoV"
+        app:layout_constraintRight_toRightOf="@+id/glChegadoV"
+        app:layout_constraintTop_toTopOf="@+id/glChegadoH"
+        app:layout_constraintBottom_toBottomOf="@+id/glChegadoH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRioNovoV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.74" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRioNovoH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.615" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rio_novo"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Rio Novo"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glRioNovoV"
+        app:layout_constraintRight_toRightOf="@+id/glRioNovoV"
+        app:layout_constraintTop_toTopOf="@+id/glRioNovoH"
+        app:layout_constraintBottom_toBottomOf="@+id/glRioNovoH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glSJacintoV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glSJacintoH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.675" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sao_jacinto"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="S. Jacinto"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glSJacintoV"
+        app:layout_constraintRight_toRightOf="@+id/glSJacintoV"
+        app:layout_constraintTop_toTopOf="@+id/glSJacintoH"
+        app:layout_constraintBottom_toBottomOf="@+id/glSJacintoH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBarraV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBarraH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.725" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/barra"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Barra"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glBarraV"
+        app:layout_constraintRight_toRightOf="@+id/glBarraV"
+        app:layout_constraintTop_toTopOf="@+id/glBarraH"
+        app:layout_constraintBottom_toBottomOf="@+id/glBarraH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glAveiroV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glAveiroH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.725" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/aveiro"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Aveiro"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glAveiroV"
+        app:layout_constraintRight_toRightOf="@+id/glAveiroV"
+        app:layout_constraintTop_toTopOf="@+id/glAveiroH"
+        app:layout_constraintBottom_toBottomOf="@+id/glAveiroH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCostaNovaV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCostaNovaH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/costa_nova"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Costa\nNova"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glCostaNovaV"
+        app:layout_constraintRight_toRightOf="@+id/glCostaNovaV"
+        app:layout_constraintTop_toTopOf="@+id/glCostaNovaH"
+        app:layout_constraintBottom_toBottomOf="@+id/glCostaNovaH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glIlhavoV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glIlhavoH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.827" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ilhavo"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Ílhavo"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glIlhavoV"
+        app:layout_constraintRight_toRightOf="@+id/glIlhavoV"
+        app:layout_constraintTop_toTopOf="@+id/glIlhavoH"
+        app:layout_constraintBottom_toBottomOf="@+id/glIlhavoH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVagueiraV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVagueiraH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.925" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/vagueira"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Vagueira"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glVagueiraV"
+        app:layout_constraintRight_toRightOf="@+id/glVagueiraV"
+        app:layout_constraintTop_toTopOf="@+id/glVagueiraH"
+        app:layout_constraintBottom_toBottomOf="@+id/glVagueiraH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVistaAlegreV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.53" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVistaAlegreH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.899" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/vista_alegre"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:background="@color/transparent"
+        android:onClick="onClickLocation"
+        android:text="Vista\nAlegre"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        app:layout_constraintLeft_toLeftOf="@+id/glVistaAlegreV"
+        app:layout_constraintRight_toRightOf="@+id/glVistaAlegreV"
+        app:layout_constraintTop_toTopOf="@+id/glVistaAlegreH"
+        app:layout_constraintBottom_toBottomOf="@+id/glVistaAlegreH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLabelsV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.71" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLabel1H"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9385" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLabel2H"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.977" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="128dp"
+        android:layout_height="45dp"
+        android:background="@color/transparent"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="OBSERVAÇÃO"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/glLabelsV"
+        app:layout_constraintTop_toTopOf="@+id/glLabel1H"
+        app:layout_constraintBottom_toBottomOf="@+id/glLabel1H" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="128dp"
+        android:layout_height="45dp"
+        android:background="@color/transparent"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="MODELO"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/glLabelsV"
+        app:layout_constraintTop_toTopOf="@+id/glLabel2H"
+        app:layout_constraintBottom_toBottomOf="@+id/glLabel2H" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLocV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLocH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.045" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label"
+        android:layout_width="129dp"
+        android:layout_height="27dp"
+        android:background="@color/transparent"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="LOCALIZAÇÃO"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="@+id/glLocV"
+        app:layout_constraintRight_toRightOf="@+id/glLocV"
+        app:layout_constraintTop_toTopOf="@+id/glLocH"
+        app:layout_constraintBottom_toBottomOf="@+id/glLocH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glInfoV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.91" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glInfoH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0459" />
+
+    <ImageButton
+        android:id="@+id/info"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:onClick="onClickInfo"
+        android:background="@drawable/botao_info"
+        app:layout_constraintLeft_toLeftOf="@+id/glInfoV"
+        app:layout_constraintRight_toRightOf="@+id/glInfoV"
+        app:layout_constraintTop_toTopOf="@+id/glInfoH"
+        app:layout_constraintBottom_toBottomOf="@+id/glInfoH" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPlusV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.115" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPlusH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.152" />
+
+    <ImageButton
+        android:id="@+id/plus"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:background="@drawable/botao___localizacoes"
+        android:onClick="onClickPlus"
+        app:layout_constraintLeft_toLeftOf="@+id/glPlusV"
+        app:layout_constraintRight_toRightOf="@+id/glPlusV"
+        app:layout_constraintTop_toTopOf="@+id/glPlusH"
+        app:layout_constraintBottom_toBottomOf="@+id/glPlusH" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
